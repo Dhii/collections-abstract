@@ -2,12 +2,14 @@
 
 namespace Dhii\Collection;
 
+use Dhii\Stats;
+
 /**
  * Common functionality for callback collections.
  *
  * @since [*next-version*]
  */
-abstract class AbstractCallbackCollectionBase extends AbstractAggregatableCollection
+abstract class AbstractCallbackCollectionBase extends Stats\AbstractAggregatableCollection
 {
     /**
      * Retrieve a callback instance that will apply a callback to each item in the list.
