@@ -12,10 +12,13 @@
     "minimum-stability": "dev",
     "require": {
         "dhii/collections-interface": "dev-master",
-        "dhii/stats-abstract": "dev-master"
+        "dhii/stats-abstract": "dev-master",
+        "dhii/collections-abstract-base": "dev-develop as dev-master"
     },
     "require-dev": {
-        "dhii/php-cs-fixer-config": "dev-php-5.3"
+        "dhii/php-cs-fixer-config": "dev-php-5.3",
+        "phpunit/phpunit": "4.*",
+        "ptrofimov/xpmock": "^1.1"
     },
     "autoload": {
         "psr-4": {
