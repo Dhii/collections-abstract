@@ -11,9 +11,9 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "dhii/collections-interface": "dev-master",
-        "dhii/stats-abstract": "dev-master",
-        "dhii/collections-abstract-base": "dev-develop as dev-master"
+        "dhii/collections-interface": "dev-develop",
+        "dhii/stats-abstract": "dev-develop",
+        "dhii/collections-abstract-base": "dev-develop"
     },
     "require-dev": {
         "dhii/php-cs-fixer-config": "dev-php-5.3",
