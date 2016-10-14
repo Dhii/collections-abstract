@@ -42,8 +42,5 @@ abstract class AbstractCallbackCollectionBase extends Stats\AbstractAggregatable
      *
      * @return CallbackIterator The new callback iterator.
      */
-    protected function _createCallbackIterator($callback, $items)
-    {
-        return new CallbackIterator($items, $callback);
-    }
+    abstract protected function _createCallbackIterator($callback, $items);
 }
