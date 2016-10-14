@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/collections-abstract-base.git",
-                "reference": "b5766ae2d22e7dafa559176a77e1664593493f9a"
+                "reference": "a71050e59009f72d5ab0ee4f41011ea6fd8cc93d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/collections-abstract-base/zipball/b5766ae2d22e7dafa559176a77e1664593493f9a",
-                "reference": "b5766ae2d22e7dafa559176a77e1664593493f9a",
+                "url": "https://api.github.com/repos/Dhii/collections-abstract-base/zipball/a71050e59009f72d5ab0ee4f41011ea6fd8cc93d",
+                "reference": "a71050e59009f72d5ab0ee4f41011ea6fd8cc93d",
                 "shasum": ""
             },
             "require": {
@@ -47,7 +47,7 @@
                 }
             ],
             "description": "Collection base classes that do not depend on other non-collection packages, on which there is a dependency of other collection packages that depend on this package. This is done to avoid circular reference in the collection toolchain",
-            "time": "2016-10-12 12:58:22"
+            "time": "2016-10-13 18:21:26"
         },
         {
             "name": "dhii/collections-interface",
