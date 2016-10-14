@@ -55,12 +55,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/collections-interface.git",
-                "reference": "c3723f39cdb701dee65f02f3d632e4486d9a515a"
+                "reference": "0c38be0fe385cac9ac216d11d6924c39a04663e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/collections-interface/zipball/c3723f39cdb701dee65f02f3d632e4486d9a515a",
-                "reference": "c3723f39cdb701dee65f02f3d632e4486d9a515a",
+                "url": "https://api.github.com/repos/Dhii/collections-interface/zipball/0c38be0fe385cac9ac216d11d6924c39a04663e4",
+                "reference": "0c38be0fe385cac9ac216d11d6924c39a04663e4",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 }
             ],
             "description": "Interfaces for collections",
-            "time": "2016-09-30 16:19:20"
+            "time": "2016-10-14 16:01:41"
         },
         {
             "name": "dhii/stats-abstract",
