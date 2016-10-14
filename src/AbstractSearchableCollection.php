@@ -17,7 +17,7 @@ abstract class AbstractSearchableCollection extends AbstractCallbackCollection
      * @since [*next-version*]
      *
      * @param callable $eval See {@see SearchableCollectionInterface::search()} for details on the callback.
-     * @param object[]|\Traversable
+     * @param object[]|\Traversable|null $items The list to search. If `null`, uses this instance.
      *
      * @throws InvalidArgumentException If the evaluator is not callable.
      *
