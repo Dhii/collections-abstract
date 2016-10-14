@@ -9,7 +9,7 @@ use UnexpectedValueException;
  *
  * @since [*next-version*]
  */
-abstract class AbstractCallbackIterator extends AbstractIterableCollection implements CallbackIteratorInterface
+abstract class AbstractCallbackIterator extends AbstractIterableCollection
 {
     protected $callback;
     protected $isHalted = false;
@@ -31,11 +31,10 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection imple
     }
 
     /**
-     * {@inheritdoc}
-     *
+     * @see CallbackIteratorInterface::getCallback()
      * @since [*next-version*]
      */
-    public function getCallback()
+    protected function _getCallback()
     {
         return $this->callback;
     }
@@ -47,10 +46,23 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection imple
      */
     public function current()
     {
-        $item = parent::current();
+        return $this->_getProcessedCurrent();
+    }
+
+    /**
+     * Retrieves the value of the current element after the callback is applied to it.
+     *
+     * @see \Iterator::current()
+     * @since [*next-version*]
+     *
+     * @return mixed The processed current element.
+     */
+    protected function _getProcessedCurrent()
+    {
+        $item = $this->_current();
 
         $isContinue = true;
-        $item       = $this->_applyCallback($this->key(), $item, $isContinue);
+        $item       = $this->_applyCallback($this->_key(), $item, $isContinue);
 
         if (!$isContinue) {
             $this->_halt();
@@ -73,7 +85,7 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection imple
      */
     public function _applyCallback($key, $item, &$isContinue)
     {
-        $callback = $this->getCallback();
+        $callback = $this->_getCallback();
         $this->_validateCallback($callback);
 
         return call_user_func_array($callback, array($key, $item, &$isContinue));
@@ -117,14 +129,14 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection imple
 
     /**
      * Stop iteration of the current loop.
-     * 
+     *
      * Because the callback executes outside of the scope of the loop, it is not
      * possible to halt iteration immediately. However, calling this with `true`
      * will cause the next call to `valid()` to return `false`, which signals
      * that the loop should break.
      *
      * @since [*next-version*]
-     * 
+     *
      * @param bool $isHalted Whether or not iteration should stop.
      *
      * @return bool True if iteration was halted before the new value took effect;
@@ -140,10 +152,10 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection imple
 
     /**
      * Check whether or not iteration is stopped.
-     * 
+     *
      * @see _halt()
      * @since [*next-version*]
-     * 
+     *
      * @return bool True of iteration is currently halted; false otherwise.
      */
     protected function _isHalted()
