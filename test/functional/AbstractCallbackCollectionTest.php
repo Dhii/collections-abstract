@@ -2,12 +2,14 @@
 
 namespace Dhii\Collection\FuncTest;
 
+use Dhii\Collection;
+
 /**
  * Tests {@see \Dhii\Collection\AbstractCallbackCollection}.
  *
  * @since [*next-version*]
  */
-class AbstractCallbackCollectionBaseTest extends \Xpmock\TestCase
+class AbstractCallbackCollectionTest extends \Xpmock\TestCase
 {
     /**
      * Creates a new instance of the test subject.
@@ -18,14 +20,42 @@ class AbstractCallbackCollectionBaseTest extends \Xpmock\TestCase
      */
     public function createInstance()
     {
-        $instance = $this->mock('Dhii\\Collection\\AbstractCallbackCollectionBase')
+        $me = $this;
+        $instance = $this->mock('Dhii\\Collection\\AbstractCallbackCollection')
                 ->_validateItem()
+                ->_createCallbackIterator(function($callback, $items) use ($me) {
+                    return $me->createCallbackIterator($items, $callback);
+                })
                 ->new();
 
         $reflection = $this->reflect($instance);
         $reflection->_construct();
 
         return $instance;
+    }
+
+    /**
+     * Creates a new callback iterator.
+     *
+     * @since [*next-version*]
+     *
+     * @param mixed[]|\Traversable $items The items for the callback iterator.
+     * @param callable $callback The callback for the callback iterator.
+     *
+     * @return Collection\AbstractCallbackIterator The new callback iterator instance.
+     */
+    public function createCallbackIterator($items, $callback)
+    {
+        $mock = $this->mock('Dhii\\Collection\\AbstractCallbackIterator')
+                ->_validateItem()
+                ->new();
+
+        $reflection = $this->reflect($mock);
+
+        $reflection->_setItems($items);
+        $reflection->_setCallback($callback);
+
+        return $mock;
     }
 
     /**
@@ -37,7 +67,7 @@ class AbstractCallbackCollectionBaseTest extends \Xpmock\TestCase
     {
         $subject = $this->createInstance();
 
-        $this->assertInstanceOf('Dhii\\Collection\\AbstractCallbackCollectionBase', $subject, 'Subject is not of the required type');
+        $this->assertInstanceOf('Dhii\\Collection\\AbstractCallbackCollection', $subject, 'Subject is not of the required type');
     }
 
     /**
