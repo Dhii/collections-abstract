@@ -13,7 +13,7 @@
     "require": {
         "dhii/collections-interface": "dev-develop",
         "dhii/stats-abstract": "dev-develop",
-        "dhii/collections-abstract-base": "dev-develop"
+        "dhii/collections-abstract-base": "dev-wip/refactor as dev-develop"
     },
     "require-dev": {
         "dhii/php-cs-fixer-config": "dev-php-5.3",
