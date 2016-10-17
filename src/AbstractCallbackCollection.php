@@ -5,6 +5,8 @@ namespace Dhii\Collection;
 /**
  * Common functionality for callback collections.
  *
+ * Intended for implementation of {@see \Dhii\Collection\CallbackCollectionInterface}.
+ *
  * @since [*next-version*]
  */
 abstract class AbstractCallbackCollection extends AbstractWritableCollection
