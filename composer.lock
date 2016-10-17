@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "317f99e440a8eb1b89b3c30260ba4bc9",
-    "content-hash": "ccc40263f7d1af4092d344e4e10f87c7",
+    "hash": "64e0b2f577c966a0121e46f1d4151287",
+    "content-hash": "58df5bf6c88f22b4077d2145095557ac",
     "packages": [
         {
             "name": "dhii/collections-abstract-base",
@@ -48,16 +48,16 @@
         },
         {
             "name": "dhii/collections-interface",
-            "version": "dev-develop",
+            "version": "dev-wip/refactoring",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/collections-interface.git",
-                "reference": "0c38be0fe385cac9ac216d11d6924c39a04663e4"
+                "reference": "82d42e5e3b7be7e91bfc4904f344498790a29264"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/collections-interface/zipball/0c38be0fe385cac9ac216d11d6924c39a04663e4",
-                "reference": "0c38be0fe385cac9ac216d11d6924c39a04663e4",
+                "url": "https://api.github.com/repos/Dhii/collections-interface/zipball/82d42e5e3b7be7e91bfc4904f344498790a29264",
+                "reference": "82d42e5e3b7be7e91bfc4904f344498790a29264",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 }
             ],
             "description": "Interfaces for collections",
-            "time": "2016-10-14 16:01:41"
+            "time": "2016-10-17 11:32:57"
         },
         {
             "name": "dhii/stats-abstract",
@@ -1738,6 +1738,12 @@
         }
     ],
     "aliases": [
+        {
+            "alias": "dev-develop",
+            "alias_normalized": "dev-develop",
+            "version": "dev-wip/refactoring",
+            "package": "dhii/collections-interface"
+        },
         {
             "alias": "dev-develop",
             "alias_normalized": "dev-develop",
