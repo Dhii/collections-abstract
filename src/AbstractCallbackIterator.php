@@ -40,16 +40,6 @@ abstract class AbstractCallbackIterator extends AbstractWritableCollection
     }
 
     /**
-     * {@inheritdoc}
-     *
-     * @since [*next-version*]
-     */
-    public function current()
-    {
-        return $this->_getProcessedCurrent();
-    }
-
-    /**
      * Retrieves the value of the current element after the callback is applied to it.
      *
      * @see \Iterator::current()
@@ -164,25 +154,27 @@ abstract class AbstractCallbackIterator extends AbstractWritableCollection
     }
 
     /**
-     * {@inheritdoc}
+     * Rewinds the internal pointer, also resetting callback data.
      *
      * @since [*next-version*]
      */
-    public function rewind()
+    protected function _rewindResetCallback()
     {
         $this->_halt(false);
-        parent::rewind();
+        parent::_rewind();
     }
 
     /**
-     * {@inheritdoc}
+     * Determines the validity of the current element, taking callback into account.
      *
      * @since [*next-version*]
+     *
+     * @return bool True if the current element is valid and the callback is not halted; false otherwise.
      */
-    public function valid()
+    protected function _validCheckCallback()
     {
         return $this->_isHalted()
             ? false
-            : parent::valid();
+            : parent::_valid();
     }
 }
