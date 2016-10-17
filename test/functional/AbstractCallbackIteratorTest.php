@@ -37,4 +37,38 @@ class AbstractCallbackIteratorTest extends \Xpmock\TestCase
 
         $this->assertInstanceOf('Dhii\\Collection\\AbstractCallbackIterator', $subject, 'The subject is not of a required type');
     }
+
+    /**
+     * Tests whether iteration happens correctly and callback has desired effect.
+     *
+     * @since [*next-version*]
+     */
+    public function testIteration()
+    {
+        $subject = $this->createInstance();
+        $reflection = $this->reflect($subject);
+
+        $index = 0;
+        $items = array();
+        $data = array('one' => 'banana', 'two' => 'orange', 'three' => 'pineapple');
+        $reflection->items = $data;
+        $reflection->_setCallback(function($key, $item, &$isContinue) use (&$index) {
+            // Stop after second element
+            if ($index === 1) {
+                $isContinue = false;
+            }
+
+            $index++;
+
+            return strtoupper($item);
+        });
+
+        while ($reflection->_validCheckCallback()) {
+            $items[$reflection->_key()] = $reflection->_currentProcessed();
+
+            $reflection->_next();
+        }
+        $reflection->_rewindResetCallback();
+        $this->assertEquals(array('one' => 'BANANA', 'two' => 'ORANGE'), $items, 'Iteration did not yield correct results');
+    }
 }
