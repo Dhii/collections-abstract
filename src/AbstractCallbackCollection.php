@@ -2,14 +2,12 @@
 
 namespace Dhii\Collection;
 
-use Dhii\Stats;
-
 /**
  * Common functionality for callback collections.
  *
  * @since [*next-version*]
  */
-abstract class AbstractCallbackCollection extends Stats\AbstractAggregatableCollection
+abstract class AbstractCallbackCollection extends AbstractWritableCollection
 {
     /**
      * Retrieve a callback instance that will apply a callback to each item in the list.
@@ -40,7 +38,7 @@ abstract class AbstractCallbackCollection extends Stats\AbstractAggregatableColl
      * @param callable           $callback The callback for the iterator to apply to each item.
      * @param array|\Traversable $items    The list of items for the iterator to iterate over.
      *
-     * @return CallbackIterator The new callback iterator.
+     * @return CallbackIteratorInterface The new callback iterator.
      */
     abstract protected function _createCallbackIterator($callback, $items);
 }
