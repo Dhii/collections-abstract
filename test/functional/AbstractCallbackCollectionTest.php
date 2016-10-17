@@ -39,15 +39,11 @@ class AbstractCallbackCollectionTest extends \Xpmock\TestCase
      *
      * @since [*next-version*]
      *
-     * @param mixed[]|\Traversable $items The items for the callback iterator.
-     * @param callable $callback The callback for the callback iterator.
-     *
      * @return Collection\AbstractCallbackIterator The new callback iterator instance.
      */
     public function createCallbackIterator($items, $callback)
     {
         $mock = $this->mock('Dhii\\Collection\\AbstractCallbackIterator')
-                ->_validateItem()
                 ->new();
 
         $reflection = $this->reflect($mock);
@@ -71,41 +67,23 @@ class AbstractCallbackCollectionTest extends \Xpmock\TestCase
     }
 
     /**
-     * Tests whether the each() method runs as required.
+     * Tests whether the callback iterator retrieved is what is created internally, and it has correct data set.
      *
      * @since [*next-version*]
      */
     public function testEach()
     {
-        $me = $this;
         $subject = $this->createInstance();
         $reflection = $this->reflect($subject);
 
-        $reflection->_addItem('apple');
-        $reflection->_addItem('banana');
-        $reflection->_addItem('orange');
-        $items = $reflection->_getItems();
+        $callback = function($key, $item, &$isContinue) {
+            return strtoupper($item);
+        };
+        $data = array('apple', 'banana');
+        $iterator = $reflection->_each($callback, $data);
 
-        $iterations = 0;
-        $iterator = $reflection->_each(
-            /* In the `use` statement, the `$iterations` variable is byref to bypass early binding:
-             * http://stackoverflow.com/q/8403908#comment37564320_8403958
-             */
-            function($key, $item, &$isContinue) use ($me, &$iterations, $items) {
-                $iterations++;
-                if ($iterations === 2) {
-                    // This tests whether breaking out of the loop works from the callback
-                    $isContinue = false;
-                }
-
-                $me->assertContains($item, $items, 'The current item is not in the collection');
-            }
-        );
-
-        foreach ($iterator as $_item) {
-            // Callback only runs on each iteration.
-        }
-
-        $this->assertEquals(2, $iterations, 'The callback has not been invoked the required number of times');
+        $iteratorReflection = $this->reflect($iterator);
+        $this->assertEquals($data, $iteratorReflection->_getItems(), 'Iterator does not have the items set');
+        $this->assertEquals($callback, $iteratorReflection->_getCallback(), 'Iterator does not have the callback set');
     }
 }
