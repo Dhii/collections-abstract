@@ -57,7 +57,7 @@ abstract class AbstractCallbackIterator extends AbstractWritableCollection
      *
      * @return mixed The processed current element.
      */
-    protected function _getProcessedCurrent()
+    protected function _currentProcessed()
     {
         $item = $this->_current();
 
