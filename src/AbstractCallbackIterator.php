@@ -9,7 +9,7 @@ use UnexpectedValueException;
  *
  * @since [*next-version*]
  */
-abstract class AbstractCallbackIterator extends AbstractIterableCollection
+abstract class AbstractCallbackIterator extends AbstractWritableCollection
 {
     protected $callback;
     protected $isHalted = false;
