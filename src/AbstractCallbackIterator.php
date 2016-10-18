@@ -25,6 +25,7 @@ abstract class AbstractCallbackIterator extends AbstractWritableCollection
      */
     protected function _setCallback($callback)
     {
+        $this->_validateCallback($callback, false);
         $this->callback = $callback;
 
         return $this;
@@ -90,10 +91,14 @@ abstract class AbstractCallbackIterator extends AbstractWritableCollection
      *
      * @throws \UnexpectedValueException If the callback cannot be invoked.
      */
-    protected function _validateCallback($callback)
+    protected function _validateCallback($callback, $isCheckCallable = true)
     {
-        if (!is_callable($callback)) {
-            throw $this->_createUnexpectedValueException(sprintf('Could not apply callback: Callback must be callable'));
+        if (!is_callable($callback, !$isCheckCallable)) {
+            throw $this->_createUnexpectedValueException(sprintf('Invalid callback: %1$s',
+                $isCheckCallable
+                    ? 'Callback must be callable'
+                    : 'Wrong callback format'
+            ));
         }
     }
 
