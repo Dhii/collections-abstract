@@ -7,6 +7,8 @@ use InvalidArgumentException;
 /**
  * Common functionality for collection searching.
  *
+ * Intended for implementation of {@see \Dhii\Collection\SearchableCollectionInterface}.
+ *
  * @since [*next-version*]
  */
 abstract class AbstractSearchableCollection extends AbstractCallbackCollection
