@@ -11,8 +11,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "dhii/collections-interface": "dev-wip/refactoring as dev-develop",
-        "dhii/stats-abstract": "dev-develop",
         "dhii/collections-abstract-base": "dev-wip/refactor as dev-develop"
     },
     "require-dev": {
