@@ -71,4 +71,38 @@ class AbstractCallbackIteratorTest extends \Xpmock\TestCase
         $reflection->_rewindResetCallback();
         $this->assertEquals(array('one' => 'BANANA', 'two' => 'ORANGE'), $items, 'Iteration did not yield correct results');
     }
+
+    /**
+     * Tests that an invalid callback cannot be set.
+     *
+     * @since [*next-version*]
+     *
+     * @expectedException UnexpectedValueException
+     * @expectedExceptionMessage format
+     */
+    public function testCallbackInvalid()
+    {
+        $subject = $this->createInstance();
+        $reflection = $this->reflect($subject);
+
+        $reflection->_setCallback(new \stdClass());
+    }
+    /**
+     * Tests that an exception is thrown when attempting to ivoke a callback
+     * that is not callable.
+     *
+     * @since [*next-version*]
+     *
+     * @expectedException UnexpectedValueException
+     * @expectedExceptionMessage callable
+     */
+    public function testCallbackNotCallable()
+    {
+        $subject = $this->createInstance();
+        $reflection = $this->reflect($subject);
+
+        $reflection->callback = (array('NonExistingClass', 'nonExistingMethod'));
+        $reflection->items = array('apple');
+        $reflection->_currentProcessed();
+    }
 }
