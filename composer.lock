@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "64e0b2f577c966a0121e46f1d4151287",
+    "hash": "e4d6f43f7843e9f79587316526331a4d",
     "content-hash": "58df5bf6c88f22b4077d2145095557ac",
     "packages": [
         {
@@ -52,12 +52,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/collections-interface.git",
-                "reference": "82d42e5e3b7be7e91bfc4904f344498790a29264"
+                "reference": "78a2498ba21af06df5cb789c6cb0d578d0e913b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/collections-interface/zipball/82d42e5e3b7be7e91bfc4904f344498790a29264",
-                "reference": "82d42e5e3b7be7e91bfc4904f344498790a29264",
+                "url": "https://api.github.com/repos/Dhii/collections-interface/zipball/78a2498ba21af06df5cb789c6cb0d578d0e913b3",
+                "reference": "78a2498ba21af06df5cb789c6cb0d578d0e913b3",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 }
             ],
             "description": "Interfaces for collections",
-            "time": "2016-10-17 11:32:57"
+            "time": "2016-10-17 16:59:04"
         },
         {
             "name": "dhii/stats-abstract",
