@@ -2,8 +2,6 @@
 
 namespace Dhii\Collection;
 
-use UnexpectedValueException;
-
 /**
  * Common functionality for callback iterators.
  *
@@ -88,12 +86,12 @@ abstract class AbstractCallbackIterator extends AbstractWritableCollection
      *
      * @param mixed $callback The value to check.
      *
-     * @throws \Exception
+     * @throws \UnexpectedValueException If the callback cannot be invoked.
      */
     protected function _validateCallback($callback)
     {
         if (!is_callable($callback)) {
-            throw new UnexpectedValueException(sprintf('Could not apply callback: Callback must be callable'));
+            throw $this->_createUnexpectedValueException(sprintf('Could not apply callback: Callback must be callable'));
         }
     }
 
