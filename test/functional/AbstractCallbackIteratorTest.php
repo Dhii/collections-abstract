@@ -87,6 +87,7 @@ class AbstractCallbackIteratorTest extends \Xpmock\TestCase
 
         $reflection->_setCallback(new \stdClass());
     }
+
     /**
      * Tests that an exception is thrown when attempting to ivoke a callback
      * that is not callable.
