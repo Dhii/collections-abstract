@@ -14,7 +14,7 @@ use Dhii\Collection;
  *
  * @since [*next-version*]
  */
-class CallbackIterator extends Collection\AbstractCallbackIterator implements Collection\TraversableCollectionInterface
+class CallbackIterator extends Collection\AbstractCallbackIterator implements \Iterator
 {
     /**
      * @inheritdoc
