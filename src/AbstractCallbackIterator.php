@@ -5,6 +5,8 @@ namespace Dhii\Collection;
 /**
  * Common functionality for callback iterators.
  *
+ * Intended for implementation of {@see \Dhii\Collection\CallbackIteratorInterface}.
+ *
  * @since [*next-version*]
  */
 abstract class AbstractCallbackIterator extends AbstractWritableCollection
