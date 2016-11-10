@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fcb4f0d81e9817f310edc9e37f0b1416",
-    "content-hash": "cb4212556296ddd0112580f70b46f872",
+    "hash": "ffbb516e9caaae60f4dcd06038c30bae",
+    "content-hash": "7b734ffe2650cae1be1f2474f684c1e2",
     "packages": [
         {
             "name": "dhii/collections-abstract-base",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/collections-abstract-base.git",
-                "reference": "699430c5bd24f0bd5a886ac77484a5271f6a6527"
+                "reference": "0ec0147451a72a13fb327ac6ff747c5e953c56f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/collections-abstract-base/zipball/699430c5bd24f0bd5a886ac77484a5271f6a6527",
-                "reference": "699430c5bd24f0bd5a886ac77484a5271f6a6527",
+                "url": "https://api.github.com/repos/Dhii/collections-abstract-base/zipball/0ec0147451a72a13fb327ac6ff747c5e953c56f3",
+                "reference": "0ec0147451a72a13fb327ac6ff747c5e953c56f3",
                 "shasum": ""
             },
             "require": {
-                "dhii/collections-interface": "dev-master"
+                "dhii/collections-interface": "^0.1.1"
             },
             "require-dev": {
                 "codeclimate/php-test-reporter": "dev-master",
@@ -47,20 +47,20 @@
                 }
             ],
             "description": "Collection base classes that do not depend on other non-collection packages, on which there is a dependency of other collection packages that depend on this package. This is done to avoid circular reference in the collection toolchain",
-            "time": "2016-10-11 19:04:21"
+            "time": "2016-11-10 15:09:37"
         },
         {
             "name": "dhii/collections-interface",
-            "version": "dev-master",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/collections-interface.git",
-                "reference": "65a5fd89ec5605fa57d2feb3e9cee885887f0313"
+                "reference": "1d8c785cdf8b63334b35f9a2d663b82e56d06e4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/collections-interface/zipball/65a5fd89ec5605fa57d2feb3e9cee885887f0313",
-                "reference": "65a5fd89ec5605fa57d2feb3e9cee885887f0313",
+                "url": "https://api.github.com/repos/Dhii/collections-interface/zipball/1d8c785cdf8b63334b35f9a2d663b82e56d06e4f",
+                "reference": "1d8c785cdf8b63334b35f9a2d663b82e56d06e4f",
                 "shasum": ""
             },
             "require": {
@@ -88,25 +88,25 @@
                 }
             ],
             "description": "Interfaces for collections",
-            "time": "2016-10-11 18:00:09"
+            "time": "2016-11-09 19:23:28"
         },
         {
             "name": "dhii/stats-abstract",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/stats-abstract.git",
-                "reference": "29bf0da6147bbb87bc5fdc9f7027b979678c9e68"
+                "reference": "71f6702c3257c71ab3917b6d076d3c3588cc9f49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/stats-abstract/zipball/29bf0da6147bbb87bc5fdc9f7027b979678c9e68",
-                "reference": "29bf0da6147bbb87bc5fdc9f7027b979678c9e68",
+                "url": "https://api.github.com/repos/Dhii/stats-abstract/zipball/71f6702c3257c71ab3917b6d076d3c3588cc9f49",
+                "reference": "71f6702c3257c71ab3917b6d076d3c3588cc9f49",
                 "shasum": ""
             },
             "require": {
-                "dhii/collections-abstract-base": "dev-master",
-                "dhii/stats-interface": "dev-master"
+                "dhii/collections-abstract-base": "^0.1.0",
+                "dhii/stats-interface": "^0.1.0"
             },
             "require-dev": {
                 "dhii/php-cs-fixer-config": "dev-php-5.3",
@@ -130,24 +130,27 @@
                 }
             ],
             "description": "Abstract base for stats",
-            "time": "2016-10-12 07:11:09"
+            "time": "2016-11-10 18:55:43"
         },
         {
             "name": "dhii/stats-interface",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/stats-interface.git",
-                "reference": "afb71a15096e9857e78d6a85d317f3e7a1dc350f"
+                "reference": "36d09a8b8a3b8058214dae6eefb8ecdd98e0f0ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/stats-interface/zipball/afb71a15096e9857e78d6a85d317f3e7a1dc350f",
-                "reference": "afb71a15096e9857e78d6a85d317f3e7a1dc350f",
+                "url": "https://api.github.com/repos/Dhii/stats-interface/zipball/36d09a8b8a3b8058214dae6eefb8ecdd98e0f0ba",
+                "reference": "36d09a8b8a3b8058214dae6eefb8ecdd98e0f0ba",
                 "shasum": ""
             },
+            "require": {
+                "php": "^5.3 | ^7.0"
+            },
             "require-dev": {
-                "dhii/php-cs-fixer-config": "dev-master"
+                "dhii/php-cs-fixer-config": "dev-php-5.3"
             },
             "type": "library",
             "autoload": {
@@ -166,7 +169,7 @@
                 }
             ],
             "description": "Interfaces for stats",
-            "time": "2016-09-02 14:58:12"
+            "time": "2016-11-10 15:38:37"
         }
     ],
     "packages-dev": [
@@ -1743,9 +1746,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "dhii/collections-interface": 20,
-        "dhii/stats-abstract": 20,
-        "dhii/collections-abstract-base": 20,
         "dhii/php-cs-fixer-config": 20
     },
     "prefer-stable": false,
