@@ -7,7 +7,7 @@ use Dhii\Stats;
 /**
  * Common functionality for callback collections.
  *
- * @since [*next-version*]
+ * @since 0.1.0
  */
 abstract class AbstractCallbackCollectionBase extends Stats\AbstractAggregatableCollection
 {
@@ -16,7 +16,7 @@ abstract class AbstractCallbackCollectionBase extends Stats\AbstractAggregatable
      *
      * See {@see CallbackIterableInterface::each()} for details about the callback.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      *
      * @param callable           $callback The callback to apply to each item in the list. Default: itself.
      * @param array|\Traversable $items    The list of items to iterate over.
@@ -35,7 +35,7 @@ abstract class AbstractCallbackCollectionBase extends Stats\AbstractAggregatable
     /**
      * Create a new instance of callback iterator for the specified callback and item list.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      *
      * @param callable           $callback The callback for the iterator to apply to each item.
      * @param array|\Traversable $items    The list of items for the iterator to iterate over.
