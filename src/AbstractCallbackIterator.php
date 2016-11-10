@@ -7,7 +7,7 @@ use UnexpectedValueException;
 /**
  * Common functionality for callback iterators.
  *
- * @since [*next-version*]
+ * @since 0.1.0
  */
 abstract class AbstractCallbackIterator extends AbstractIterableCollection
 {
@@ -17,7 +17,7 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection
     /**
      * Sets the callback that will be applied to each element of this collection.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      *
      * @param callable $callback The callback for this iterator to apply.
      *
@@ -31,8 +31,11 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection
     }
 
     /**
+     * {@inheritdoc}
+     *
      * @see CallbackIteratorInterface::getCallback()
-     * @since [*next-version*]
+     *
+     * @since 0.1.0
      */
     protected function _getCallback()
     {
@@ -42,7 +45,7 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function current()
     {
@@ -76,7 +79,7 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection
      *
      * See {@see CallbackIterableInterface::each()} for details about the callback.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      *
      * @param string|int $key  The key of the current item.
      * @param mixed      $item The item to apply the callback to.
@@ -94,7 +97,7 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection
     /**
      * Determines if a value is a valid callback.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      *
      * @param mixed $callback The value to check.
      *
@@ -110,7 +113,7 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection
     /**
      * Determines if a value is a valid callback.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      *
      * @param mixed $callback The value to check.
      *
@@ -135,8 +138,8 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection
      * will cause the next call to `valid()` to return `false`, which signals
      * that the loop should break.
      *
-     * @since [*next-version*]
-     *
+     * @since 0.1.0
+     * 
      * @param bool $isHalted Whether or not iteration should stop.
      *
      * @return bool True if iteration was halted before the new value took effect;
@@ -154,8 +157,8 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection
      * Check whether or not iteration is stopped.
      *
      * @see _halt()
-     * @since [*next-version*]
-     *
+     * @since 0.1.0
+     * 
      * @return bool True of iteration is currently halted; false otherwise.
      */
     protected function _isHalted()
@@ -166,7 +169,7 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function rewind()
     {
@@ -177,7 +180,7 @@ abstract class AbstractCallbackIterator extends AbstractIterableCollection
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function valid()
     {

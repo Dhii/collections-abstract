@@ -7,14 +7,14 @@ use Dhii\Collection;
 /**
  * Tests {@see \Dhii\Collection\AbstractCallbackCollection}.
  *
- * @since [*next-version*]
+ * @since 0.1.0
  */
 class AbstractCallbackCollectionTest extends \Xpmock\TestCase
 {
     /**
      * Creates a new instance of the test subject.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      *
      * @return \Dhii\Collection\AbstractCallbackCollection The new instance of the test subject.
      */
@@ -61,7 +61,7 @@ class AbstractCallbackCollectionTest extends \Xpmock\TestCase
     /**
      * Tests whether a valid instance of the test subejct can be created.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function testCanBeCreated()
     {
@@ -73,7 +73,7 @@ class AbstractCallbackCollectionTest extends \Xpmock\TestCase
     /**
      * Tests whether the each() method runs as required.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function testEach()
     {

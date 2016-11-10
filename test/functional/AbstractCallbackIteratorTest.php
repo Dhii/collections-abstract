@@ -5,14 +5,14 @@ namespace Dhii\Collection\FuncTest;
 /**
  * Testing {@see \Dhii\Collection\AbstractCallbackIterator}.
  *
- * @since [*next-version*]
+ * @since 0.1.0
  */
 class AbstractCallbackIteratorTest extends \Xpmock\TestCase
 {
     /**
      * Creates a new instance of the test subject.
      * 
-     * @since [*next-version*]
+     * @since 0.1.0
      * 
      * @return \Dhii\Collection\AbstractCallbackIterator The new instance of the test subject.
      */
@@ -28,7 +28,7 @@ class AbstractCallbackIteratorTest extends \Xpmock\TestCase
     /**
      * Tests whether a valid instance of the test subject can be created.
      * 
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function testCanBeCreated()
     {
