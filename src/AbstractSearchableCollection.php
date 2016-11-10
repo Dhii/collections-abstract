@@ -7,14 +7,14 @@ use InvalidArgumentException;
 /**
  * Common functionality for collection searching.
  *
- * @since [*next-version*]
+ * @since 0.1.0
  */
 abstract class AbstractSearchableCollection extends AbstractCallbackCollection
 {
     /**
      * Search the items of a collection according to arbitrary criteria.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      *
      * @param callable $eval See {@see SearchableCollectionInterface::search()} for details on the callback.
      * @param object[]|\Traversable
@@ -41,7 +41,7 @@ abstract class AbstractSearchableCollection extends AbstractCallbackCollection
     /**
      * Creates an iterator of set of items that are are result of a search.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      *
      * @param mixed[] The array of items.
      *
@@ -60,7 +60,7 @@ abstract class AbstractSearchableCollection extends AbstractCallbackCollection
     /**
      * Determines whether an item is a valid search item.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      *
      * @param mixed $item The item to validate.
      *

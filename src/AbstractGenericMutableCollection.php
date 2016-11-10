@@ -5,14 +5,14 @@ namespace Dhii\Collection;
 /**
  * Common functionality for collections that can have its item set changed.
  *
- * @since [*next-version*]
+ * @since 0.1.0
  */
 abstract class AbstractGenericMutableCollection extends AbstractGenericCollection implements MutableCollectionInterface
 {
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function addItem($item)
     {
@@ -26,7 +26,7 @@ abstract class AbstractGenericMutableCollection extends AbstractGenericCollectio
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function addItems($items)
     {
@@ -40,7 +40,7 @@ abstract class AbstractGenericMutableCollection extends AbstractGenericCollectio
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function removeItem($item)
     {
@@ -54,7 +54,7 @@ abstract class AbstractGenericMutableCollection extends AbstractGenericCollectio
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function removeItemByKey($key)
     {

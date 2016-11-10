@@ -5,14 +5,14 @@ namespace Dhii\Collection;
 /**
  * Common functionality for generic collections that can have its items retrieved and checked.
  *
- * @since [*next-version*]
+ * @since 0.1.0
  */
 abstract class AbstractGenericAccessibleCollection extends AbstractGenericCollection implements AccessibleCollectionInterface
 {
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function getItem($key)
     {
@@ -22,7 +22,7 @@ abstract class AbstractGenericAccessibleCollection extends AbstractGenericCollec
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function hasItem($item)
     {
@@ -32,7 +32,7 @@ abstract class AbstractGenericAccessibleCollection extends AbstractGenericCollec
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function hasItemKey($key)
     {

@@ -5,12 +5,12 @@ namespace Dhii\Collection;
 /**
  * A default implementation of a general purpose collection.
  *
- * @since [*next-version*]
+ * @since 0.1.0
  */
 abstract class AbstractGenericCollection extends AbstractSearchableCollection
 {
     /**
-     * @since [*next-version*] 
+     * @since 0.1.0 
      *
      * @param mixed[]|\Traversable $items The items to populate this collection with.
      */
@@ -24,7 +24,7 @@ abstract class AbstractGenericCollection extends AbstractSearchableCollection
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*] 
+     * @since 0.1.0 
      */
     public function _validateItem($item)
     {

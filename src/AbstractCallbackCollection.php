@@ -7,14 +7,14 @@ namespace Dhii\Collection;
  *
  * Ready to be extended and instantiated, with minimal or no modifications.
  *
- * @since [*next-version*]
+ * @since 0.1.0
  */
 abstract class AbstractCallbackCollection extends AbstractCallbackCollectionBase implements CallbackIterableInterface
 {
     /**
      * {@inheritdoc}
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      */
     public function each($callback)
     {

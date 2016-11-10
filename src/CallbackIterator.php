@@ -7,12 +7,12 @@ namespace Dhii\Collection;
  *
  * Can have values of any type, and of different types.
  *
- * @since [*next-version*]
+ * @since 0.1.0
  */
 class CallbackIterator extends AbstractCallbackIterator
 {
     /**
-     * @since [*next-version*]
+     * @since 0.1.0
      *
      * @param mixed[]|\Traversable $items    A list of items to iterate over.
      * @param callable             $callback
@@ -26,7 +26,7 @@ class CallbackIterator extends AbstractCallbackIterator
     /**
      * Allows any items through.
      *
-     * @since [*next-version*]
+     * @since 0.1.0
      *
      * @return bool Always true.
      */
